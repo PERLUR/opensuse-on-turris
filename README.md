@@ -1,15 +1,15 @@
 # opensuse-on-turris
-Documenting how to install and run openSUSE on Turris routers
+## Documenting how to install and run openSUSE on Turris routers
 
 I'm doing all of this through UART.
 
-I am trying to boot openSuse Tumbleweed: http://download.opensuse.org/ports/armv7hl/tumbleweed/appliances/openSUSE-Tumbleweed-ARM-JeOS.armv7-rootfs.armv7l.tar.xz
+Attempting to boot openSuse Tumbleweed: http://download.opensuse.org/ports/armv7hl/tumbleweed/appliances/openSUSE-Tumbleweed-ARM-JeOS.armv7-rootfs.armv7l.tar.xz
 
-ON a seperate device insert your USB drive and download the above image.
+On a seperate device insert your USB drive and download the above image.
 
 Create a `btrfs` partition on USB `/dev/sda1` in my case.
 
-Mounted it it and extracted the above tar onto it.
+Mounted it and extracted the above tar onto it.
 
 On your Turris omnia, connect your UART and boot the device, if you connected your UART properly you should be able to `minicom -D /dev/ttyUSB0`
 right from terminal.
@@ -43,3 +43,8 @@ One other strange thing is current uboot is missing `btrload` command which isn'
 `boot`
 
 If you have a fuck up at any time just `env default -a` and you'll be back to booting TurrisOS from emmc.
+
+## Existing documentation
+- [openSUSE Wiki - HCL:Turris Omnia](https://en.opensuse.org/HCL:Turris_Omnia)
+- [openSUSE Wiki - HCL:Turris MOX](https://en.opensuse.org/HCL:Turris_Mox)
+
